@@ -4,17 +4,19 @@ const connection = mysql.createConnection({
   host: process.env.DB_HOST,
   user: process.env.DB_USERNAME,
 });
-
 // Create the "dashboard" database if it doesn't already exist
-connection.query("CREATE DATABASE IF NOT EXISTS dashboard", (err) => {
-  if (err) throw err;
-  console.log("Database created");
-});
+connection.query(
+  "CREATE DATABASE IF NOT EXISTS bmjal2b8ixojfgp7vjpu",
+  (err) => {
+    if (err) throw err;
+    console.log("Database created");
+  }
+);
 
 // Connect to the "dashboard" database
-connection.query("USE dashboard", (err) => {
+connection.query("USE bmjal2b8ixojfgp7vjpu", (err) => {
   if (err) throw err;
-  console.log("Using database: dashboard");
+  console.log("Using database: bmjal2b8ixojfgp7vjpu");
 });
 
 // Create the "mentors" table
